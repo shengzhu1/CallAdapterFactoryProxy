@@ -5,9 +5,7 @@
 具体使用如下
 
 ```kotlin
-val interceptors = ArrayList<ObservableInterceptor>()
         //添加其他拦截器
-        interceptors.add(SchedulerInterceptor())
         val callAdapterFactoryProxy = CallAdapterFactoryProxy.create()
             .addInterceptor(SchedulerInterceptor())
         retrofit = Retrofit.Builder()
